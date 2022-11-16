@@ -1,0 +1,38 @@
+//Задача 1
+select round(AVG (prod_price),2)
+from products;
+//Задача 2
+select round(AVG (prod_price),2) as "Средняя стоимость"
+from products
+where vend_id = 1003;
+//Задача 3
+select count(cust_id) as "Количество клиентов"
+from customers;
+//Задача 4
+select count(cust_email) as "Количество клиентов"
+from customers
+where cust_email is not null;
+//Задача 5
+select max(prod_price) as "Максимальная цена"
+from products;
+//Задача 6
+select min(prod_price) as "Минимальная цена"
+from products;
+//Задача 7
+select sum(quantity) as "Общее количество"
+from orderitems 
+where order_num =20005;
+//Задача 8
+select sum(item_price) as "Стоимость"
+from orderitems 
+where order_num =20005;
+//Задача 9
+select avg(distinct (prod_price)) as "Средняя стоимость"
+from products
+where vend_id = 1003;
+//Задача 10
+select avg(prod_price) as "Средняя цена",
+max(prod_price) as "Максимальная цена",
+min(prod_price) as "Минимальная цена",
+count(prod_price) as "Общее количество"
+from products;
